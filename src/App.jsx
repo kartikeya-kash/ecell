@@ -15,6 +15,13 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-black">
+        {/* Subtle liquid moving background */}
+        <div className="liquid-bg">
+          <div className="blob"></div>
+          <div className="blob"></div>
+          <div className="blob"></div>
+        </div>
+        
         <Navbar />
         <main>
           <Routes>
