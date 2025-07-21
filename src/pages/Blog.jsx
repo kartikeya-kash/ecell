@@ -81,14 +81,14 @@ const Blog = () => {
   return (
     <div className="py-12">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            E-Cell <span className="text-blue-600">Blog</span>
+      <section className="bg-gray-900 py-20">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            E-Cell Blog
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Insights, stories, and resources from the entrepreneurship community. 
-            Stay updated with the latest trends, success stories, and practical advice.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Real stories from real founders. Practical advice, honest insights, 
+            and lessons learned from building companies.
           </p>
         </div>
       </section>

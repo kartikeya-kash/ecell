@@ -10,12 +10,12 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <Zap className="h-8 w-8 text-white" />
-              <span className="text-2xl font-black tracking-tight">E-CELL</span>
+              <Zap className="h-6 w-6 text-white" />
+              <span className="text-xl font-bold">E-Cell</span>
             </div>
-            <p className="text-gray-400 mb-6 max-w-md leading-relaxed">
-              Where visionaries are forged and empires are born. 
-              Building tomorrow's industry leaders, today.
+            <p className="text-gray-400 mb-6 max-w-md">
+              The entrepreneurship society focused on building real companies 
+              and creating lasting impact.
             </p>
             <div className="flex space-x-4">
               <Facebook className="h-6 w-6 text-gray-500 hover:text-white cursor-pointer transition-all duration-300 hover:scale-125" />

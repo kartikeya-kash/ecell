@@ -23,8 +23,8 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <Zap className="h-8 w-8 text-white" />
-              <span className="text-2xl font-bold text-white tracking-tight">E-CELL</span>
+              <Zap className="h-7 w-7 text-white" />
+              <span className="text-xl font-bold text-white">E-Cell</span>
             </Link>
           </div>
 

@@ -79,16 +79,16 @@ const Newsletter = () => {
   return (
     <div className="py-12">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="bg-gray-900 py-20">
+        <div className="max-w-6xl mx-auto px-6 text-center">
           <div className="max-w-3xl mx-auto">
-            <Mail className="h-16 w-16 text-blue-600 mx-auto mb-6" />
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Stay Connected with <span className="text-blue-600">E-Cell</span>
+            <Mail className="h-16 w-16 text-white mx-auto mb-6" />
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Stay Connected
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Join thousands of entrepreneurs who rely on our newsletter for the latest insights, 
-              opportunities, and inspiration in the startup ecosystem.
+            <p className="text-xl text-gray-300 mb-8">
+              Get our monthly newsletter with updates on events, success stories, 
+              and opportunities in the E-Cell community.
             </p>
           </div>
         </div>
