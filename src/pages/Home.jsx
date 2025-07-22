@@ -45,12 +45,13 @@ const Home = () => {
   ];
 
   return (
-    <div className="bg-white text-gray-900 overflow-hidden">
+    <div className="bg-black text-gray-900 overflow-hidden min-h-screen">
       {/* Animated Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-20 overflow-hidden">
+      <section className="relative py-20 overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white rounded-3xl py-16 px-8 shadow-2xl relative overflow-hidden">
         {/* Floating particles */}
-        <div className="absolute inset-0 overflow-hidden max-w-6xl mx-auto">
+        <div className="absolute inset-0 overflow-hidden rounded-3xl">
           <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-white/20 rounded-full animate-pulse"></div>
           <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-white/30 rounded-full animate-ping"></div>
           <div className="absolute bottom-1/4 left-1/3 w-6 h-6 bg-white/10 rounded-full animate-bounce"></div>
@@ -116,7 +117,8 @@ const Home = () => {
           isVisible.stats ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50 rounded-3xl py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white/95 backdrop-blur-sm rounded-3xl py-16 px-8 shadow-2xl border border-gray-200">
           {/* Rotating featured stat */}
           <div className="text-center mb-12">
             <div className="inline-block p-10 bg-white rounded-3xl shadow-2xl transform transition-all duration-500 hover:scale-105 border border-gray-100">
@@ -144,6 +146,7 @@ const Home = () => {
               </div>
             ))}
           </div>
+          </div>
         </div>
       </section>
 
@@ -156,6 +159,7 @@ const Home = () => {
         }`}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white/95 backdrop-blur-sm rounded-3xl py-16 px-8 shadow-2xl border border-gray-200">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 animate-[fadeInUp_1s_ease-out]">
               Why Choose E-Cell?
@@ -205,6 +209,7 @@ const Home = () => {
               </div>
             ))}
           </div>
+          </div>
         </div>
       </section>
 
@@ -216,7 +221,8 @@ const Home = () => {
           isVisible.events ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50 rounded-3xl py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gray-50/95 backdrop-blur-sm rounded-3xl py-16 px-8 shadow-2xl border border-gray-200">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Upcoming Events
@@ -289,6 +295,7 @@ const Home = () => {
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
+          </div>
         </div>
       </section>
 
@@ -301,6 +308,7 @@ const Home = () => {
         }`}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white/95 backdrop-blur-sm rounded-3xl py-16 px-8 shadow-2xl border border-gray-200">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Success Stories
@@ -353,6 +361,7 @@ const Home = () => {
               </div>
             ))}
           </div>
+          </div>
         </div>
       </section>
 
@@ -365,7 +374,7 @@ const Home = () => {
         }`}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white relative overflow-hidden rounded-3xl py-16">
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white relative overflow-hidden rounded-3xl py-16 shadow-2xl border border-blue-500">
             {/* Animated background elements */}
             <div className="absolute inset-0 overflow-hidden rounded-3xl">
               <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-white/5 rounded-full animate-pulse"></div>
@@ -397,6 +406,8 @@ const Home = () => {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
           </div>
         </div>
       </section>
