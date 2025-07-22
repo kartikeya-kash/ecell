@@ -48,8 +48,9 @@ const Home = () => {
     <div className="bg-white text-gray-900 overflow-hidden">
       {/* Animated Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-20 overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Floating particles */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden max-w-6xl mx-auto">
           <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-white/20 rounded-full animate-pulse"></div>
           <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-white/30 rounded-full animate-ping"></div>
           <div className="absolute bottom-1/4 left-1/3 w-6 h-6 bg-white/10 rounded-full animate-bounce"></div>
@@ -57,7 +58,7 @@ const Home = () => {
           <div className="absolute top-3/4 left-1/2 w-8 h-8 bg-white/15 rounded-full animate-pulse"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="relative z-10">
           <div className="text-center">
             {/* Animated title */}
             <div className="opacity-0 animate-[fadeInUp_1s_ease-out_0.2s_forwards]">
@@ -104,17 +105,18 @@ const Home = () => {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Animated Stats Section */}
       <section 
         id="stats" 
         data-animate
-        className={`py-20 bg-gray-50 transition-all duration-1000 ${
+        className={`py-20 transition-all duration-1000 ${
           isVisible.stats ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50 rounded-3xl py-16">
           {/* Rotating featured stat */}
           <div className="text-center mb-12">
             <div className="inline-block p-10 bg-white rounded-3xl shadow-2xl transform transition-all duration-500 hover:scale-105 border border-gray-100">
@@ -149,11 +151,11 @@ const Home = () => {
       <section 
         id="features" 
         data-animate
-        className={`py-20 transition-all duration-1000 ${
+        className={`py-20 bg-white transition-all duration-1000 ${
           isVisible.features ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 animate-[fadeInUp_1s_ease-out]">
               Why Choose E-Cell?
@@ -210,11 +212,11 @@ const Home = () => {
       <section 
         id="events" 
         data-animate
-        className={`py-20 bg-gray-50 transition-all duration-1000 ${
+        className={`py-20 transition-all duration-1000 ${
           isVisible.events ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50 rounded-3xl py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Upcoming Events
@@ -294,11 +296,11 @@ const Home = () => {
       <section 
         id="success" 
         data-animate
-        className={`py-20 transition-all duration-1000 ${
+        className={`py-20 bg-white transition-all duration-1000 ${
           isVisible.success ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Success Stories
@@ -358,39 +360,43 @@ const Home = () => {
       <section 
         id="cta" 
         data-animate
-        className={`py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white relative overflow-hidden transition-all duration-1000 ${
+        className={`py-20 transition-all duration-1000 ${
           isVisible.cta ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-white/5 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-white/10 rounded-full animate-bounce"></div>
-          <Target className="absolute top-1/3 right-1/3 h-16 w-16 text-white/10 animate-spin" />
-        </div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white relative overflow-hidden rounded-3xl py-16">
+            {/* Animated background elements */}
+            <div className="absolute inset-0 overflow-hidden rounded-3xl">
+              <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-white/5 rounded-full animate-pulse"></div>
+              <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-white/10 rounded-full animate-bounce"></div>
+              <Target className="absolute top-1/3 right-1/3 h-16 w-16 text-white/10 animate-spin" />
+            </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-[fadeInUp_1s_ease-out]">
-            Ready to Start Your Journey?
-          </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto animate-[fadeInUp_1s_ease-out_0.2s_forwards]">
-            Join our community of innovators and entrepreneurs. Your next big idea could change the world.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-[fadeInUp_1s_ease-out_0.4s_forwards]">
-            <Link
-              to="/contact"
-              className="group bg-white text-blue-600 px-8 py-4 rounded-2xl font-semibold hover:bg-gray-100 transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-2xl"
-            >
-              <Sparkles className="mr-2 h-5 w-5 group-hover:animate-spin" />
-              Get Started Today
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/about"
-              className="group border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105"
-            >
-              Learn More About Us
-            </Link>
+            <div className="text-center relative z-10">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-[fadeInUp_1s_ease-out]">
+                Ready to Start Your Journey?
+              </h2>
+              <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto animate-[fadeInUp_1s_ease-out_0.2s_forwards]">
+                Join our community of innovators and entrepreneurs. Your next big idea could change the world.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center animate-[fadeInUp_1s_ease-out_0.4s_forwards]">
+                <Link
+                  to="/contact"
+                  className="group bg-white text-blue-600 px-8 py-4 rounded-2xl font-semibold hover:bg-gray-100 transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-2xl"
+                >
+                  <Sparkles className="mr-2 h-5 w-5 group-hover:animate-spin" />
+                  Get Started Today
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  to="/about"
+                  className="group border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105"
+                >
+                  Learn More About Us
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
