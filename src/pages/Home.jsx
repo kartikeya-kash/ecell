@@ -4,293 +4,252 @@ import { ArrowRight, Play, Users, TrendingUp, Calendar, Award, ChevronDown, Exte
 
 const Home = () => {
   return (
-    <div className="bg-black text-white overflow-hidden">
-      {/* Hero Section - Split Screen Design */}
-      <section className="min-h-screen flex items-center relative">
-        <div className="max-w-7xl mx-auto px-6 w-full">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left Side - Content */}
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <div className="inline-block px-4 py-2 bg-gray-800 rounded-full text-sm font-medium">
-                  🚀 Building Tomorrow's Companies
-                </div>
-                <h1 className="text-5xl lg:text-7xl font-black leading-tight">
-                  Where Ideas
-                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
-                    Become Reality
-                  </span>
-                </h1>
-                <p className="text-xl text-gray-300 max-w-lg leading-relaxed">
-                  Join 200+ ambitious students turning startup dreams into million-dollar companies. 
-                  No theory. Just results.
-                </p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/events"
-                  className="group bg-white text-black px-8 py-4 font-bold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"
-                >
-                  Join Next Event
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <button className="group border-2 border-gray-600 px-8 py-4 font-bold hover:border-white transition-all duration-300 flex items-center justify-center">
-                  <Play className="mr-2 h-5 w-5" />
-                  Watch Demo
-                </button>
-              </div>
-            </div>
-
-            {/* Right Side - Stats Cards */}
-            <div className="grid grid-cols-2 gap-6">
-              <div className="bg-gray-900 p-8 border border-gray-800 hover:border-gray-600 transition-colors">
-                <div className="text-4xl font-black mb-2">43</div>
-                <div className="text-gray-400 text-sm uppercase tracking-wide">Companies Launched</div>
-              </div>
-              <div className="bg-gray-900 p-8 border border-gray-800 hover:border-gray-600 transition-colors">
-                <div className="text-4xl font-black mb-2">$3.2M</div>
-                <div className="text-gray-400 text-sm uppercase tracking-wide">Total Funding</div>
-              </div>
-              <div className="bg-gray-900 p-8 border border-gray-800 hover:border-gray-600 transition-colors">
-                <div className="text-4xl font-black mb-2">200+</div>
-                <div className="text-gray-400 text-sm uppercase tracking-wide">Active Members</div>
-              </div>
-              <div className="bg-gray-900 p-8 border border-gray-800 hover:border-gray-600 transition-colors">
-                <div className="text-4xl font-black mb-2">150+</div>
-                <div className="text-gray-400 text-sm uppercase tracking-wide">Jobs Created</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="h-6 w-6 text-gray-400" />
-        </div>
-      </section>
-
-      {/* Featured Success Story - Full Width */}
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-black border border-gray-800 overflow-hidden">
-            <div className="lg:flex">
-              <div className="lg:w-1/2 p-12 lg:p-16">
-                <div className="space-y-6">
-                  <div className="inline-block px-3 py-1 bg-green-900 text-green-300 text-sm font-medium rounded">
-                    SUCCESS STORY
-                  </div>
-                  <h2 className="text-4xl font-black">
-                    From Dorm Room to $500K Funding
-                  </h2>
-                  <p className="text-gray-300 text-lg leading-relaxed">
-                    Sarah Chen started TechFlow in our incubator last year. Today, she's hiring 10 people 
-                    and just closed her seed round. Her advice? "Stop planning, start building."
-                  </p>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gray-700 rounded-full"></div>
-                    <div>
-                      <div className="font-semibold">Sarah Chen</div>
-                      <div className="text-gray-400 text-sm">Founder, TechFlow</div>
-                    </div>
-                  </div>
-                  <Link 
-                    to="/about" 
-                    className="inline-flex items-center text-white hover:text-gray-300 font-medium"
-                  >
-                    Read Full Story
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </Link>
-                </div>
-              </div>
-              <div className="lg:w-1/2 bg-gray-800 flex items-center justify-center p-16">
-                <div className="text-center">
-                  <TrendingUp className="h-24 w-24 text-gray-600 mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-gray-400">Growth Trajectory</div>
-                </div>
-              </div>
+    <div className="bg-white text-gray-900 overflow-hidden">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Build the Future with <span className="text-blue-200">E-Cell</span>
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+              Join the entrepreneurship revolution. Connect with like-minded innovators, 
+              learn from industry experts, and turn your ideas into reality.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/events"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
+              >
+                Join Next Event
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center">
+                <Play className="mr-2 h-5 w-5" />
+                Watch Demo
+              </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Three Column Features */}
-      <section className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-black mb-4">How We Work</h2>
-            <p className="text-gray-400 text-lg">Three simple steps to launch your startup</p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            <div className="group">
-              <div className="bg-gray-900 p-8 border border-gray-800 hover:border-gray-600 transition-all duration-300 h-full">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Users className="h-8 w-8 text-black" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4">01. Connect</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Meet co-founders, find mentors, and join a community of builders. 
-                  Real connections that lead to real partnerships.
-                </p>
-              </div>
-            </div>
-
-            <div className="group">
-              <div className="bg-gray-900 p-8 border border-gray-800 hover:border-gray-600 transition-all duration-300 h-full">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Calendar className="h-8 w-8 text-black" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4">02. Learn</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Weekly workshops with founders who've been there. Legal, funding, 
-                  product - everything you need to know.
-                </p>
-              </div>
-            </div>
-
-            <div className="group">
-              <div className="bg-gray-900 p-8 border border-gray-800 hover:border-gray-600 transition-all duration-300 h-full">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Award className="h-8 w-8 text-black" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4">03. Launch</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Get funding, find customers, hire your team. We provide resources 
-                  and connections to make it happen.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Upcoming Events - Horizontal Scroll */}
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex justify-between items-center mb-12">
+      {/* Stats Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <h2 className="text-4xl font-black mb-2">This Month</h2>
-              <p className="text-gray-400">Don't miss these upcoming events</p>
+              <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">500+</div>
+              <div className="text-gray-600">Active Members</div>
             </div>
-            <Link 
-              to="/events" 
-              className="text-white hover:text-gray-300 font-medium flex items-center"
+            <div>
+              <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">50+</div>
+              <div className="text-gray-600">Startups Launched</div>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">$2M+</div>
+              <div className="text-gray-600">Funding Raised</div>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">100+</div>
+              <div className="text-gray-600">Events Hosted</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose E-Cell?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide everything you need to transform your entrepreneurial dreams into successful ventures.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-8 w-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Community</h3>
+              <p className="text-gray-600">
+                Connect with passionate entrepreneurs, mentors, and industry experts who share your vision.
+              </p>
+            </div>
+
+            <div className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Calendar className="h-8 w-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Events</h3>
+              <p className="text-gray-600">
+                Regular workshops, pitch competitions, and networking events to accelerate your growth.
+              </p>
+            </div>
+
+            <div className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="h-8 w-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Recognition</h3>
+              <p className="text-gray-600">
+                Showcase your innovations and get recognized for your entrepreneurial achievements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Upcoming Events */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Upcoming Events
+            </h2>
+            <p className="text-xl text-gray-600">
+              Don't miss out on these exciting opportunities to learn and network.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="bg-blue-600 text-white p-4">
+                <div className="text-2xl font-bold">25</div>
+                <div className="text-blue-100">January</div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Startup Pitch Competition</h3>
+                <p className="text-gray-600 mb-4">Present your ideas to investors and win exciting prizes.</p>
+                <div className="flex items-center text-sm text-gray-500">
+                  <Calendar className="h-4 w-4 mr-1" />
+                  <span>7:00 PM - Main Auditorium</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="bg-blue-600 text-white p-4">
+                <div className="text-2xl font-bold">02</div>
+                <div className="text-blue-100">February</div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">AI & Innovation Workshop</h3>
+                <p className="text-gray-600 mb-4">Learn how AI is transforming the startup landscape.</p>
+                <div className="flex items-center text-sm text-gray-500">
+                  <Calendar className="h-4 w-4 mr-1" />
+                  <span>2:00 PM - Tech Lab</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="bg-blue-600 text-white p-4">
+                <div className="text-2xl font-bold">15</div>
+                <div className="text-blue-100">February</div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Networking Night</h3>
+                <p className="text-gray-600 mb-4">Connect with fellow entrepreneurs and industry leaders.</p>
+                <div className="flex items-center text-sm text-gray-500">
+                  <Calendar className="h-4 w-4 mr-1" />
+                  <span>6:00 PM - Student Center</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              to="/events"
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
             >
               View All Events
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
+        </div>
+      </section>
 
-          <div className="grid lg:grid-cols-3 gap-6">
-            <div className="bg-black border border-gray-800 hover:border-gray-600 transition-colors group">
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <div className="bg-white text-black px-3 py-1 text-sm font-bold">
-                    JAN 25
-                  </div>
-                  <div className="text-gray-400 text-sm">7:00 PM</div>
+      {/* Success Stories */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Success Stories
+            </h2>
+            <p className="text-xl text-gray-600">
+              Meet some of our successful alumni who turned their ideas into thriving businesses.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-xl">
+              <div className="flex items-center mb-4">
+                <img
+                  src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150"
+                  alt="Sarah Johnson"
+                  className="w-16 h-16 rounded-full object-cover mr-4"
+                />
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900">Sarah Johnson</h3>
+                  <p className="text-blue-600">Founder, TechStart Inc.</p>
                 </div>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-gray-300 transition-colors">
-                  Pitch Night #47
-                </h3>
-                <p className="text-gray-400 text-sm mb-4">
-                  5 startups, 3 minutes each, real feedback from real investors
-                </p>
-                <div className="text-gray-500 text-xs">Main Auditorium</div>
               </div>
+              <p className="text-gray-700 italic">
+                "E-Cell provided me with the network, mentorship, and resources I needed to launch my startup. 
+                Today, TechStart Inc. has raised $2M in funding and employs 25 people."
+              </p>
             </div>
 
-            <div className="bg-black border border-gray-800 hover:border-gray-600 transition-colors group">
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <div className="bg-white text-black px-3 py-1 text-sm font-bold">
-                    FEB 2
-                  </div>
-                  <div className="text-gray-400 text-sm">6:00 PM</div>
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-xl">
+              <div className="flex items-center mb-4">
+                <img
+                  src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=150"
+                  alt="Michael Chen"
+                  className="w-16 h-16 rounded-full object-cover mr-4"
+                />
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900">Michael Chen</h3>
+                  <p className="text-blue-600">CEO, InnovateNow</p>
                 </div>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-gray-300 transition-colors">
-                  Legal Workshop
-                </h3>
-                <p className="text-gray-400 text-sm mb-4">
-                  Incorporation, equity, contracts - the stuff you need to know
-                </p>
-                <div className="text-gray-500 text-xs">Conference Room A</div>
               </div>
-            </div>
-
-            <div className="bg-black border border-gray-800 hover:border-gray-600 transition-colors group">
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <div className="bg-white text-black px-3 py-1 text-sm font-bold">
-                    FEB 8
-                  </div>
-                  <div className="text-gray-400 text-sm">8:30 AM</div>
-                </div>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-gray-300 transition-colors">
-                  Founder Breakfast
-                </h3>
-                <p className="text-gray-400 text-sm mb-4">
-                  Coffee and conversation with local entrepreneurs
-                </p>
-                <div className="text-gray-500 text-xs">Student Center</div>
-              </div>
+              <p className="text-gray-700 italic">
+                "The pitch competitions and workshops at E-Cell helped me refine my business model. 
+                InnovateNow is now a leading player in the fintech space."
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Recent Wins - Side by Side */}
-      <section className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-black mb-16 text-center">Recent Wins</h2>
-          
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div className="bg-gray-900 border border-gray-800 p-8 hover:border-gray-600 transition-colors">
-              <div className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3">TechFlow Raises $500K</h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    Started in our incubator last year, TechFlow just closed their seed round. 
-                    They're hiring 10 people this quarter.
-                  </p>
-                  <div className="text-sm text-gray-500">Sarah Chen, CS '23</div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gray-900 border border-gray-800 p-8 hover:border-gray-600 transition-colors">
-              <div className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3">GreenLogistics Acquired</h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    Two years after starting at our pitch competition, GreenLogistics 
-                    was acquired by a Fortune 500 company.
-                  </p>
-                  <div className="text-sm text-gray-500">Mike Rodriguez, MBA '22</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section - Minimal */}
-      <section className="py-20 bg-gray-900 border-t border-gray-800">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-black mb-6">Ready to Build?</h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-            Stop waiting for the perfect moment. Join 200+ students who are already building the future.
+      {/* CTA Section */}
+      <section className="py-20 bg-blue-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Start Your Journey?
+          </h2>
+          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+            Join our community of innovators and entrepreneurs. Your next big idea could change the world.
           </p>
-          <Link
-            to="/contact"
-            className="bg-white text-black px-12 py-4 text-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
-          >
-            Get Started Today
-            <ArrowRight className="ml-3 h-5 w-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
+            >
+              Get Started Today
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link
+              to="/about"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center"
+            >
+              Learn More About Us
+            </Link>
+          </div>
         </div>
       </section>
     </div>
