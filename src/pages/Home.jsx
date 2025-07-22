@@ -50,10 +50,11 @@ const Home = () => {
       <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-20 overflow-hidden">
         {/* Floating particles */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/20 rounded-full animate-pulse"></div>
-          <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-white/30 rounded-full animate-ping"></div>
-          <div className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-white/10 rounded-full animate-bounce"></div>
-          <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-white/25 rounded-full animate-pulse"></div>
+          <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-white/20 rounded-full animate-pulse"></div>
+          <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-white/30 rounded-full animate-ping"></div>
+          <div className="absolute bottom-1/4 left-1/3 w-6 h-6 bg-white/10 rounded-full animate-bounce"></div>
+          <div className="absolute top-1/2 right-1/4 w-5 h-5 bg-white/25 rounded-full animate-pulse"></div>
+          <div className="absolute top-3/4 left-1/2 w-8 h-8 bg-white/15 rounded-full animate-pulse"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -84,13 +85,13 @@ const Home = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/events"
-                  className="group bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-2xl"
+                  className="group bg-white text-blue-600 px-8 py-4 rounded-2xl font-semibold hover:bg-gray-100 transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-2xl"
                 >
                   <Zap className="mr-2 h-5 w-5 group-hover:animate-pulse" />
                   Join Next Event
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <button className="group border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105">
+                <button className="group border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105">
                   <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                   Watch Demo
                 </button>
@@ -116,11 +117,11 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Rotating featured stat */}
           <div className="text-center mb-12">
-            <div className="inline-block p-8 bg-white rounded-2xl shadow-xl transform transition-all duration-500 hover:scale-105">
+            <div className="inline-block p-10 bg-white rounded-3xl shadow-2xl transform transition-all duration-500 hover:scale-105 border border-gray-100">
               <div className={`text-6xl font-bold mb-2 transition-colors duration-500 ${stats[currentStat].color}`}>
                 {stats[currentStat].number}
               </div>
-              <div className="text-gray-600 text-lg">{stats[currentStat].label}</div>
+              <div className="text-gray-600 text-lg font-medium">{stats[currentStat].label}</div>
             </div>
           </div>
 
@@ -185,12 +186,12 @@ const Home = () => {
             ].map((feature, index) => (
               <div 
                 key={index}
-                className={`group text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 ${
+                className={`group text-center p-8 bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 border border-gray-100 ${
                   isVisible.features ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
                 style={{ transitionDelay: feature.delay }}
               >
-                <div className="bg-gradient-to-br from-blue-50 to-blue-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
@@ -252,12 +253,12 @@ const Home = () => {
             ].map((event, index) => (
               <div 
                 key={index}
-                className={`group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 ${
+                className={`group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 border border-gray-100 ${
                   isVisible.events ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
                 style={{ transitionDelay: event.delay }}
               >
-                <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6 group-hover:from-blue-700 group-hover:to-blue-800 transition-all duration-300">
+                <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6 group-hover:from-blue-700 group-hover:to-blue-800 transition-all duration-300 rounded-t-3xl">
                   <div className="text-3xl font-bold">{event.date}</div>
                   <div className="text-blue-100">{event.month}</div>
                 </div>
@@ -280,7 +281,7 @@ const Home = () => {
           }`}>
             <Link
               to="/events"
-              className="group bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 inline-flex items-center transform hover:scale-105 hover:shadow-xl"
+              className="group bg-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-blue-700 transition-all duration-300 inline-flex items-center transform hover:scale-105 hover:shadow-xl"
             >
               View All Events
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -326,7 +327,7 @@ const Home = () => {
             ].map((story, index) => (
               <div 
                 key={index}
-                className={`group bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl hover:shadow-xl transition-all duration-500 transform hover:scale-105 ${
+                className={`group bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-3xl hover:shadow-xl transition-all duration-500 transform hover:scale-105 border border-blue-100 ${
                   isVisible.success ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
                 style={{ transitionDelay: story.delay }}
@@ -335,7 +336,7 @@ const Home = () => {
                   <img
                     src={story.image}
                     alt={story.name}
-                    className="w-16 h-16 rounded-full object-cover mr-4 ring-4 ring-white group-hover:ring-blue-200 transition-all duration-300"
+                    className="w-16 h-16 rounded-full object-cover mr-4 ring-4 ring-white group-hover:ring-blue-200 transition-all duration-300 shadow-lg"
                   />
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-700 transition-colors">
@@ -378,7 +379,7 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-[fadeInUp_1s_ease-out_0.4s_forwards]">
             <Link
               to="/contact"
-              className="group bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-2xl"
+              className="group bg-white text-blue-600 px-8 py-4 rounded-2xl font-semibold hover:bg-gray-100 transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-2xl"
             >
               <Sparkles className="mr-2 h-5 w-5 group-hover:animate-spin" />
               Get Started Today
@@ -386,7 +387,7 @@ const Home = () => {
             </Link>
             <Link
               to="/about"
-              className="group border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105"
+              className="group border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105"
             >
               Learn More About Us
             </Link>
